@@ -1,6 +1,13 @@
 FROM smebberson/alpine-nginx:3.0.0
 MAINTAINER Scott Mebberson <scott@scottmebberson.com>
 
+ARG BACKGROUND_URL
+ARG LOGO_URL
+ARG CEST_DATE
+ENV REACT_APP_BACKGROUND_URL=$BACKGROUND_URL
+ENV REACT_APP_LOGO_URL=$LOGO_URL
+ENV REACT_APP_CEST_DATE=$CEST_DATE
+
 ENV NODE_VERSION=v12.8.0 NPM_VERSION=6.10.2
 
 RUN echo "http://dl-4.alpinelinux.org/alpine/v3.2/main" >> /etc/apk/repositories && \
