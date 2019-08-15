@@ -22,16 +22,16 @@ const Logo = ({ url }) => (
   </div>
 );
 
-function App() {
+function App({ serverState }) {
   return (
     <div
       style={{
-        backgroundImage: `url(${process.env.REACT_APP_BACKGROUND_URL})`,
+        backgroundImage: `url(${serverState.BACKGROUND_URL})`,
       }} 
       className="App"
     >
-      <Logo url={process.env.REACT_APP_LOGO_URL} />
-      <Counter date={process.env.REACT_APP_CEST_DATE} />
+      <Logo url={serverState.LOGO_URL} />
+      <Counter date={serverState.CEST_DATE} />
     </div>
   );
 }

@@ -24,7 +24,14 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-    <title>%REACT_APP_WEBSITE_NAME%</title>
+    <title>%WEBSITE_NAME%</title>
+    <script language="JavaScript">
+      window.serverState = {
+        BACKGROUND_URL: '%BACKGROUND_URL%',
+        LOGO_URL: '%LOGO_URL%',
+        CEST_DATE: '%CEST_DATE%'
+      }
+    </script>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
